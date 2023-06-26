@@ -28,7 +28,14 @@ def input_data_function():
         return render_template('outer.html', uid=uid, pwd=pwd, destination=destination, input_event=input_event, year=year, month=month, start_day=start_day, end_day=end_day)
     
     return render_template('index.html')
-      
+
+
+
+@application.route('/outer', methods=['GET'])
+def display_outer():
+    return render_template('outer.html')
+
+
 if __name__ == '__main__':
     application.run(host='0.0.0.0')
 
